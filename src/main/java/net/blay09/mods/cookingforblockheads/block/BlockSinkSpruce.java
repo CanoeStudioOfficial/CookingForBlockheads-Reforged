@@ -43,7 +43,7 @@ public class BlockSinkSpruce extends BlockSink {
     public BlockSinkSpruce(Material material) {
         super(material);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.WOOD);
     }
 

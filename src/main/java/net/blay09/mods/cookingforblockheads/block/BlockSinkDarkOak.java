@@ -39,7 +39,7 @@ public class BlockSinkDarkOak extends BlockSink {
     public BlockSinkDarkOak(Material material) {
         super(material);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.WOOD);
     }
 

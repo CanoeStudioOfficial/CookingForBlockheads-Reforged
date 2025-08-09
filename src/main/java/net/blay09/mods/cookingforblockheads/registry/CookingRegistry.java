@@ -391,6 +391,6 @@ public class CookingRegistry {
             return true;
         }
         ResourceLocation registryName = outputItem.getItem().getRegistryName();
-        return registryName != null && registryName.getResourcePath().contains("bucket");
+        return registryName != null && registryName.getPath().contains("bucket");
     }
 }

@@ -39,7 +39,7 @@ public class BlockSinkAcacia extends BlockSink {
     public BlockSinkAcacia(Material material) {
         super(material);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.WOOD);
     }
 

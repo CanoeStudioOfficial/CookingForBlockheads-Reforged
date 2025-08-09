@@ -43,7 +43,7 @@ public class BlockSink extends BlockKitchen {
     public BlockSink(Material material) {
         super(material);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.STONE);
         setHardness(5f);
         setResistance(10f);

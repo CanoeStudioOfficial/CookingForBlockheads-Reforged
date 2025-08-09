@@ -41,7 +41,7 @@ public class BlockToaster extends BlockKitchen {
     public BlockToaster() {
         super(Material.IRON);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.METAL);
         setHardness(2.5f);
     }
