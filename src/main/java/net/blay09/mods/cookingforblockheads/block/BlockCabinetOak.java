@@ -35,7 +35,7 @@ public class BlockCabinetOak extends BlockCabinet {
     public BlockCabinetOak(Material material) {
         super(material);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.WOOD);
     }
 

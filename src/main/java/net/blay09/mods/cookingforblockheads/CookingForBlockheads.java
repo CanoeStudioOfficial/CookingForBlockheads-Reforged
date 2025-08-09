@@ -47,7 +47,7 @@ public class CookingForBlockheads {
     public static final NonNullList<ItemStack> extraCreativeTabItems = NonNullList.create();
     public static final CreativeTabs creativeTab = new CreativeTabs(MOD_ID) {
         @Override
-        public ItemStack getTabIconItem() {
+        public ItemStack createIcon() {
             return new ItemStack(ModItems.recipeBook, 1, 1);
         }
 

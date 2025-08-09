@@ -34,7 +34,7 @@ public class BlockMilkJar extends BlockKitchen {
     public BlockMilkJar() {
         super(Material.GLASS);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.GLASS);
         setHardness(0.6f);
     }
@@ -96,7 +96,7 @@ public class BlockMilkJar extends BlockKitchen {
     }
 
     @Override
-    public BlockRenderLayer getBlockLayer() {
+    public BlockRenderLayer getRenderLayer() {
         return BlockRenderLayer.CUTOUT;
     }
 

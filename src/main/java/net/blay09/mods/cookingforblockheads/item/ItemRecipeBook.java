@@ -27,11 +27,6 @@ public class ItemRecipeBook extends Item {
     }
 
     @Override
-    public Item setTranslationKey(String key) {
-        return super.setTranslationKey(key);
-    }
-
-    @Override
     public String getTranslationKey(ItemStack itemstack) {
         return "item.cookingforblockheads:recipe_book_tier" + itemstack.getItemDamage();
     }

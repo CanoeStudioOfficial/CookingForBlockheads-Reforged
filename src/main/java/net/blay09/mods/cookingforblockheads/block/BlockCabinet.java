@@ -31,7 +31,7 @@ public class BlockCabinet extends BlockCounter {
     public BlockCabinet(Material material) {
         super(material);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.STONE);
     }
 

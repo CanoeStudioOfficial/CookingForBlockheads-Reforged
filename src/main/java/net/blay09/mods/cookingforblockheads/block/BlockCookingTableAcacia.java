@@ -32,7 +32,7 @@ public class BlockCookingTableAcacia extends BlockCookingTable {
     public BlockCookingTableAcacia(Material material) {
         super(material);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.WOOD);
     }
 

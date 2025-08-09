@@ -39,7 +39,7 @@ public class BlockToolRack extends BlockKitchen {
     public BlockToolRack() {
         super(Material.WOOD);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.WOOD);
         setHardness(2.5f);
     }

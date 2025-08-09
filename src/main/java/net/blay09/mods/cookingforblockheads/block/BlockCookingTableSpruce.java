@@ -36,7 +36,7 @@ public class BlockCookingTableSpruce extends BlockCookingTable {
     public BlockCookingTableSpruce(Material material) {
         super(material);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.WOOD);
     }
 

@@ -38,7 +38,7 @@ public class BlockCounterDarkOak extends BlockCounter {
     public BlockCounterDarkOak(Material material) {
         super(material);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.WOOD);
     }
 

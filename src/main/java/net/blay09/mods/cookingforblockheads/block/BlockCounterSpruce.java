@@ -45,7 +45,7 @@ public class BlockCounterSpruce extends BlockCounter {
     public BlockCounterSpruce(Material material) {
         super(material);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.WOOD);
     }
 

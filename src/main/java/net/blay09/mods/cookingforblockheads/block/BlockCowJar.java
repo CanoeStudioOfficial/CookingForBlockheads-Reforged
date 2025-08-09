@@ -12,7 +12,7 @@ public class BlockCowJar extends BlockMilkJar {
     public static final ResourceLocation registryName = new ResourceLocation(CookingForBlockheads.MOD_ID, name);
 
     public BlockCowJar() {
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
     }
 
     @Override

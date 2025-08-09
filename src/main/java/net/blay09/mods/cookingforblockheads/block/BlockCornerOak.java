@@ -30,7 +30,7 @@ public class BlockCornerOak extends BlockCorner {
     public BlockCornerOak(Material material) {
         super(material);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.WOOD);
     }
 

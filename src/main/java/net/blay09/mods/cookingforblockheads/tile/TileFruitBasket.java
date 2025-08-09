@@ -31,7 +31,7 @@ public class TileFruitBasket extends TileEntity implements IDropoffManager {
         protected void onContentsChanged(int slot) {
             markDirty();
             IBlockState blockState = world.getBlockState(pos);
-            world.markAndNotifyBlock(pos, world.getChunkFromBlockCoords(pos), blockState, blockState, 1 | 2);
+            world.markAndNotifyBlock(pos, world.getChunk(pos), blockState, blockState, 1 | 2);
         }
     };
 

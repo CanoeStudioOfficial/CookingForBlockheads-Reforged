@@ -38,7 +38,7 @@ public class BlockCounterBirch extends BlockCounter {
     public BlockCounterBirch(Material material) {
         super(material);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.WOOD);
     }
 

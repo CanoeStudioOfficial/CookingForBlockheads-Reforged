@@ -34,7 +34,7 @@ public class BlockFruitBasket extends BlockKitchen {
     public BlockFruitBasket() {
         super(Material.WOOD);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.WOOD);
         setHardness(2.5f);
     }

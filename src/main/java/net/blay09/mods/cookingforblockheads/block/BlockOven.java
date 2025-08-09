@@ -80,8 +80,9 @@ public class BlockOven extends BlockKitchen {
         }
     }
 
+
     @Override
-    public BlockRenderLayer getBlockLayer() {
+    public BlockRenderLayer getRenderLayer() {
         return BlockRenderLayer.CUTOUT;
     }
 

@@ -61,7 +61,7 @@ public class BlockFridge extends BlockKitchen {
     public BlockFridge() {
         super(Material.IRON);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.METAL);
         setHardness(5f);
         setResistance(10f);

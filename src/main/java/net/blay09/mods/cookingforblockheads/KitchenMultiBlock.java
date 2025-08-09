@@ -36,7 +36,7 @@ public class KitchenMultiBlock implements IKitchenMultiBlock {
 
     private void findNeighbourKitchenBlocks(World world, BlockPos pos, boolean extendedUpSearch) {
         for (int i = 0; i <= 5; i++) {
-            EnumFacing dir = EnumFacing.getFront(i);
+            EnumFacing dir = EnumFacing.byIndex(i);
             int upSearch = (extendedUpSearch && dir == EnumFacing.UP) ? 2 : 1;
             for (int n = 1; n <= upSearch; n++) {
                 BlockPos position = pos.offset(dir, n);
