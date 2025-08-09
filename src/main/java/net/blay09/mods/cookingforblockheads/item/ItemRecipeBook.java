@@ -27,7 +27,7 @@ public class ItemRecipeBook extends Item {
     }
 
     @Override
-    public String getUnlocalizedName(ItemStack itemstack) {
+    public String getTranslationKey(ItemStack itemstack) {
         return "item.cookingforblockheads:recipe_book_tier" + itemstack.getItemDamage();
     }
 

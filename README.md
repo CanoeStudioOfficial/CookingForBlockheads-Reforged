@@ -1,39 +1,21 @@
-# Cooking for Blockheads
+## TemplateDevEnv
+_For Kotlin see [TemplateDevEnvKt](https://github.com/CleanroomMC/TemplateDevEnvKt)_
 
-Minecraft Mod. Adds a cooking book and multiblock kitchens that only shows recipes you can make with what you currently have in your inventory.
+Template workspace for modding Minecraft 1.12.2. Licensed under MIT, it is made for public use.
 
-[![Versions](http://cf.way2muchnoise.eu/versions/cooking-for-blockheads.svg)](https://minecraft.curseforge.com/projects/cooking-for-blockheads) [![Downloads](http://cf.way2muchnoise.eu/full_cooking-for-blockheads_downloads.svg)](https://minecraft.curseforge.com/projects/cooking-for-blockheads)
+This template runs on Java 21! Currently utilizies **Gradle 8.12** + **[RetroFuturaGradle](https://github.com/GTNewHorizons/RetroFuturaGradle) 1.4.1** + **Forge 14.23.5.2847**.
 
-## Contributing
+With **coremod and mixin support** that is easy to configure.
 
-If you're interested in contributing to the mod, you can check out [issues labelled as "help wanted"](https://github.com/blay09/CookingForBlockheads/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22). These should be ready to be implemented as they are.
+### Instructions:
 
-In order to get a development environment set up, clone the repository and run `./gradlew setupDecompWorkspace` and `./gradlew idea` or `./gradlew eclipse` depending on what IDE you use.
+1. Click `use this template` at the top.
+2. Clone the repository that you have created with this template to your local machine.
+3. Make sure IDEA is using Java 21 for Gradle before you sync the project. Verify this by going to IDEA's `Settings > Build, Execution, Deployment > Build Tools > Gradle > Gradle JVM`.
+4. Open the project folder in IDEA. When prompted, click "Load Gradle Project" as it detects the `build.gradle`, if you weren't prompted, right-click the project's `build.gradle` in IDEA, select `Link Gradle Project`, after completion, hit `Refresh All` in the gradle tab on the right.
+5. Run gradle tasks such as `runClient` and `runServer` in the IDEA gradle tab, or use the auto-imported run configurations like `1. Run Client`.
 
-If you need help, feel free to join us on [Discord](https://discord.gg/scGAfXC).
-
-## Development Builds
-
-Potentially unstable in-development releases built straight from the latest code in this repository are available [on my Jenkins](http://jenkins.blay09.net).
-They may contain unfinished and broken features and no support is provided for these builds.
-
-## IMC API
-
-The below is a list of IMC message keys handled by Cooking for Blockheads.
-
-* **RegisterTool** (ItemStack)
-* **RegisterWaterItem** (ItemStack)
-* **RegisterMilkItem** (ItemStack)
-* **RegisterToast** (TagCompound : {Input : ItemStack, Output : ItemStack})
-* **RegisterToastError** (TagCompound : {Input : ItemStack, Message : String})
-* **RegisterOvenFuel** (TagCompound : {Input : ItemStack, FuelValue : Numeric})
-* **RegisterOvenRecipe** (TagCompound : {Input : ItemStack, Output : ItemStack})
-* **RegisterNonFoodRecipe** (ItemStack)
-* **RegisterCowClass** (EntityCowClassName : String) - this will cause the class to be loaded if it isn't already!
-
-## Java API
-
-If the IMC API is not enough for you, you can build against Cooking for Blockheads' Java API. I suggest using the CurseForge Maven to grab it as a dependency. For info on how to do that, you can check Cooking for Blockheads' own Gradle files.
-
-The Java API allows everything the IMC API does, and certain tasks can only be achieved via the Java API.
-However, if you don't need that extra control, it is recommended to use the IMC API.
+### Notes:
+- Dependencies script in [gradle/scripts/dependencies.gradle](gradle/scripts/dependencies.gradle), explanations are commented in the file.
+- Publishing script in [gradle/scripts/publishing.gradle](gradle/scripts/publishing.gradle).
+- When writing Mixins on IntelliJ, it is advisable to use latest [MinecraftDev Fork for RetroFuturaGradle](https://github.com/eigenraven/MinecraftDev/releases).

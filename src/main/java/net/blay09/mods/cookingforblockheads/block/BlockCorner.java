@@ -34,7 +34,7 @@ public class BlockCorner extends BlockKitchen {
     public BlockCorner(Material material) {
         super(material);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.STONE);
         setHardness(5f);
         setResistance(10f);
@@ -69,7 +69,7 @@ public class BlockCorner extends BlockKitchen {
 
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        EnumFacing facing = EnumFacing.getFront(meta);
+        EnumFacing facing = EnumFacing.byIndex(meta);
         if (facing.getAxis() == EnumFacing.Axis.Y) {
             facing = EnumFacing.NORTH;
         }

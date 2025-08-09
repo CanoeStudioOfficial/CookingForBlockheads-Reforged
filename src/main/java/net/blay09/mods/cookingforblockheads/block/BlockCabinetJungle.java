@@ -35,7 +35,7 @@ public class BlockCabinetJungle extends BlockCabinet {
     public BlockCabinetJungle(Material material) {
         super(material);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.WOOD);
     }
 

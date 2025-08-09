@@ -38,7 +38,7 @@ public class BlockCuttingBoard extends BlockKitchen {
     public BlockCuttingBoard() {
         super(Material.WOOD);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.WOOD);
         setHardness(2.5f);
         setCreativeTab(null);
@@ -56,7 +56,7 @@ public class BlockCuttingBoard extends BlockKitchen {
 
     @Override
     public IBlockState getStateFromMeta(int meta) {
-        EnumFacing facing = EnumFacing.getFront(meta);
+        EnumFacing facing = EnumFacing.byIndex(meta);
         if (facing.getAxis() == EnumFacing.Axis.Y) {
             facing = EnumFacing.NORTH;
         }
@@ -102,7 +102,7 @@ public class BlockCuttingBoard extends BlockKitchen {
     }
 
     @Override
-    public BlockRenderLayer getBlockLayer() {
+    public BlockRenderLayer getRenderLayer() {
         return BlockRenderLayer.CUTOUT;
     }
 

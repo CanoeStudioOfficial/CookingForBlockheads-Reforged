@@ -38,7 +38,7 @@ public class BlockCounterJungle extends BlockCounter {
     public BlockCounterJungle(Material material) {
         super(material);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.WOOD);
     }
 

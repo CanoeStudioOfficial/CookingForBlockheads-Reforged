@@ -46,7 +46,7 @@ public class TileToaster extends TileEntity implements ITickable {
             return true;
         } else if (id == 2) {
             IBlockState state = world.getBlockState(pos);
-            world.markAndNotifyBlock(pos, world.getChunkFromBlockCoords(pos), state, state, 3);
+            world.markAndNotifyBlock(pos, world.getChunk(pos), state, state, 3);
             return true;
         }
         return super.receiveClientEvent(id, type);
@@ -124,7 +124,7 @@ public class TileToaster extends TileEntity implements ITickable {
         }
         IBlockState state = world.getBlockState(pos);
         world.addBlockEvent(pos, ModBlocks.toaster, 2, 0);
-        world.markAndNotifyBlock(pos, world.getChunkFromBlockCoords(pos), state, ModBlocks.toaster.getActualState(state, world, pos), 3);
+        world.markAndNotifyBlock(pos, world.getChunk(pos), state, ModBlocks.toaster.getActualState(state, world, pos), 3);
         markDirty();
     }
 

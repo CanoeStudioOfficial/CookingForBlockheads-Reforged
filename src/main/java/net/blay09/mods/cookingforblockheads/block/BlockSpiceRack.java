@@ -39,7 +39,7 @@ public class BlockSpiceRack extends BlockKitchen {
     public BlockSpiceRack() {
         super(Material.WOOD);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.WOOD);
         setHardness(2.5f);
     }

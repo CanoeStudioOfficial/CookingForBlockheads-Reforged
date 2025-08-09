@@ -258,7 +258,7 @@ public class TileSink extends TileEntity implements IDyeableKitchen {
 
     public void markDirtyAndUpdate() {
         IBlockState state = world.getBlockState(pos);
-        world.markAndNotifyBlock(pos, world.getChunkFromBlockCoords(pos), state, state, 3);
+        world.markAndNotifyBlock(pos, world.getChunk(pos), state, state, 3);
         markDirty();
     }
 }

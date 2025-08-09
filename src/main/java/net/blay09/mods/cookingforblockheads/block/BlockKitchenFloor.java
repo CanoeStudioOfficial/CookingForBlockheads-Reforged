@@ -22,7 +22,7 @@ public class BlockKitchenFloor extends Block {
     public BlockKitchenFloor() {
         super(Material.ROCK);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.STONE);
         setCreativeTab(CookingForBlockheads.creativeTab);
         setHardness(5f);

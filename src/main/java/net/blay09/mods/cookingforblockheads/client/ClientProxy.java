@@ -248,7 +248,7 @@ public class ClientProxy extends CommonProxy {
         IBlockState state = defaultState.withProperty(BlockCounter.PASS, BlockCounter.ModelPass.DOOR);
         IBlockState flippedState = defaultState.withProperty(BlockCounter.PASS, BlockCounter.ModelPass.DOOR_FLIPPED);
         for (int i = 0; i < 4; i++) {
-            EnumFacing facing = EnumFacing.getHorizontal(i);
+            EnumFacing facing = EnumFacing.byHorizontalIndex(i);
                 CounterRenderer.models[i] = event.getModelRegistry().getObject(new ModelResourceLocation(BlockCounter.registryName, dummyStateMapper.getPropertyString(state.withProperty(BlockCounter.FACING, facing).getProperties())));
                 CounterRenderer.modelsFlipped[i] = event.getModelRegistry().getObject(new ModelResourceLocation(BlockCounter.registryName, dummyStateMapper.getPropertyString(flippedState.withProperty(BlockCounter.FACING, facing).getProperties())));
 
@@ -264,7 +264,7 @@ public class ClientProxy extends CommonProxy {
         state = defaultState.withProperty(BlockCounterOak.PASS, BlockCounterOak.ModelPass.DOOR);
         flippedState = defaultState.withProperty(BlockCounterOak.PASS, BlockCounterOak.ModelPass.DOOR_FLIPPED);
         for (int i = 0; i < 4; i++) {
-            EnumFacing facing = EnumFacing.getHorizontal(i);
+            EnumFacing facing = EnumFacing.byHorizontalIndex(i);
             CounterRendererOak.models[i] = event.getModelRegistry().getObject(new ModelResourceLocation(BlockCounterOak.registryName, dummyStateMapper.getPropertyString(state.withProperty(BlockCounterOak.FACING, facing).getProperties())));
             CounterRendererOak.modelsFlipped[i] = event.getModelRegistry().getObject(new ModelResourceLocation(BlockCounterOak.registryName, dummyStateMapper.getPropertyString(flippedState.withProperty(BlockCounterOak.FACING, facing).getProperties())));
 
@@ -280,7 +280,7 @@ public class ClientProxy extends CommonProxy {
         state = defaultState.withProperty(BlockCounterSpruce.PASS, BlockCounterSpruce.ModelPass.DOOR);
         flippedState = defaultState.withProperty(BlockCounterSpruce.PASS, BlockCounterSpruce.ModelPass.DOOR_FLIPPED);
         for (int i = 0; i < 4; i++) {
-            EnumFacing facing = EnumFacing.getHorizontal(i);
+            EnumFacing facing = EnumFacing.byHorizontalIndex(i);
             CounterRendererSpruce.models[i] = event.getModelRegistry().getObject(new ModelResourceLocation(BlockCounterSpruce.registryName, dummyStateMapper.getPropertyString(state.withProperty(BlockCounterSpruce.FACING, facing).getProperties())));
             CounterRendererSpruce.modelsFlipped[i] = event.getModelRegistry().getObject(new ModelResourceLocation(BlockCounterSpruce.registryName, dummyStateMapper.getPropertyString(flippedState.withProperty(BlockCounterSpruce.FACING, facing).getProperties())));
 
@@ -296,7 +296,7 @@ public class ClientProxy extends CommonProxy {
         state = defaultState.withProperty(BlockCounterBirch.PASS, BlockCounterBirch.ModelPass.DOOR);
         flippedState = defaultState.withProperty(BlockCounterBirch.PASS, BlockCounterBirch.ModelPass.DOOR_FLIPPED);
         for (int i = 0; i < 4; i++) {
-            EnumFacing facing = EnumFacing.getHorizontal(i);
+            EnumFacing facing = EnumFacing.byHorizontalIndex(i);
             CounterRendererBirch.models[i] = event.getModelRegistry().getObject(new ModelResourceLocation(BlockCounterBirch.registryName, dummyStateMapper.getPropertyString(state.withProperty(BlockCounterBirch.FACING, facing).getProperties())));
             CounterRendererBirch.modelsFlipped[i] = event.getModelRegistry().getObject(new ModelResourceLocation(BlockCounterBirch.registryName, dummyStateMapper.getPropertyString(flippedState.withProperty(BlockCounterBirch.FACING, facing).getProperties())));
 
@@ -312,7 +312,7 @@ public class ClientProxy extends CommonProxy {
         state = defaultState.withProperty(BlockCounterJungle.PASS, BlockCounterJungle.ModelPass.DOOR);
         flippedState = defaultState.withProperty(BlockCounterJungle.PASS, BlockCounterJungle.ModelPass.DOOR_FLIPPED);
         for (int i = 0; i < 4; i++) {
-            EnumFacing facing = EnumFacing.getHorizontal(i);
+            EnumFacing facing = EnumFacing.byHorizontalIndex(i);
             CounterRendererJungle.models[i] = event.getModelRegistry().getObject(new ModelResourceLocation(BlockCounterJungle.registryName, dummyStateMapper.getPropertyString(state.withProperty(BlockCounterJungle.FACING, facing).getProperties())));
             CounterRendererJungle.modelsFlipped[i] = event.getModelRegistry().getObject(new ModelResourceLocation(BlockCounterJungle.registryName, dummyStateMapper.getPropertyString(flippedState.withProperty(BlockCounterJungle.FACING, facing).getProperties())));
 
@@ -328,7 +328,7 @@ public class ClientProxy extends CommonProxy {
         state = defaultState.withProperty(BlockCounterAcacia.PASS, BlockCounterAcacia.ModelPass.DOOR);
         flippedState = defaultState.withProperty(BlockCounterAcacia.PASS, BlockCounterAcacia.ModelPass.DOOR_FLIPPED);
         for (int i = 0; i < 4; i++) {
-            EnumFacing facing = EnumFacing.getHorizontal(i);
+            EnumFacing facing = EnumFacing.byHorizontalIndex(i);
             CounterRendererAcacia.models[i] = event.getModelRegistry().getObject(new ModelResourceLocation(BlockCounterAcacia.registryName, dummyStateMapper.getPropertyString(state.withProperty(BlockCounterAcacia.FACING, facing).getProperties())));
             CounterRendererAcacia.modelsFlipped[i] = event.getModelRegistry().getObject(new ModelResourceLocation(BlockCounterAcacia.registryName, dummyStateMapper.getPropertyString(flippedState.withProperty(BlockCounterAcacia.FACING, facing).getProperties())));
 
@@ -344,7 +344,7 @@ public class ClientProxy extends CommonProxy {
         state = defaultState.withProperty(BlockCounterDarkOak.PASS, BlockCounterDarkOak.ModelPass.DOOR);
         flippedState = defaultState.withProperty(BlockCounterDarkOak.PASS, BlockCounterDarkOak.ModelPass.DOOR_FLIPPED);
         for (int i = 0; i < 4; i++) {
-            EnumFacing facing = EnumFacing.getHorizontal(i);
+            EnumFacing facing = EnumFacing.byHorizontalIndex(i);
             CounterRendererDarkOak.models[i] = event.getModelRegistry().getObject(new ModelResourceLocation(BlockCounterDarkOak.registryName, dummyStateMapper.getPropertyString(state.withProperty(BlockCounterDarkOak.FACING, facing).getProperties())));
             CounterRendererDarkOak.modelsFlipped[i] = event.getModelRegistry().getObject(new ModelResourceLocation(BlockCounterDarkOak.registryName, dummyStateMapper.getPropertyString(flippedState.withProperty(BlockCounterDarkOak.FACING, facing).getProperties())));
 

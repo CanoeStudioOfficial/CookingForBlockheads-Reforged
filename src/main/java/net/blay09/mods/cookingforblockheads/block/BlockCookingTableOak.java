@@ -32,7 +32,7 @@ public class BlockCookingTableOak extends BlockCookingTable {
     public BlockCookingTableOak(Material material) {
         super(material);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.WOOD);
     }
 

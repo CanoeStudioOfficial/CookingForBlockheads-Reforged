@@ -53,7 +53,7 @@ public class BlockOven extends BlockKitchen {
     public BlockOven() {
         super(Material.IRON);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.METAL);
         setHardness(5f);
         setResistance(10f);
@@ -80,8 +80,9 @@ public class BlockOven extends BlockKitchen {
         }
     }
 
+
     @Override
-    public BlockRenderLayer getBlockLayer() {
+    public BlockRenderLayer getRenderLayer() {
         return BlockRenderLayer.CUTOUT;
     }
 

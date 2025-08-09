@@ -34,7 +34,7 @@ public class BlockCornerSpruce extends BlockCorner {
     public BlockCornerSpruce(Material material) {
         super(material);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.WOOD);
     }
 

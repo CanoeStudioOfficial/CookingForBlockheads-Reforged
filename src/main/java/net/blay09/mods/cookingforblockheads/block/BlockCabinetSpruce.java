@@ -39,7 +39,7 @@ public class BlockCabinetSpruce extends BlockCabinet {
     public BlockCabinetSpruce(Material material) {
         super(material);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.WOOD);
     }
 

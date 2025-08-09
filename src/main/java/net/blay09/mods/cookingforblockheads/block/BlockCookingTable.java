@@ -36,7 +36,7 @@ public class BlockCookingTable extends BlockKitchen {
     public BlockCookingTable(Material material) {
         super(material);
 
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setSoundType(SoundType.STONE);
         setHardness(2.5f);
     }

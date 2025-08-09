@@ -28,7 +28,7 @@ public class ItemHeatingUnit extends Item {
     public static final ResourceLocation registryName = new ResourceLocation(CookingForBlockheads.MOD_ID, name);
 
     public ItemHeatingUnit() {
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setCreativeTab(CookingForBlockheads.creativeTab);
         setMaxStackSize(1);
     }

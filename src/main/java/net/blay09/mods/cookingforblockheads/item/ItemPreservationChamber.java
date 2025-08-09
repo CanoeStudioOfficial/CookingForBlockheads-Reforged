@@ -28,7 +28,7 @@ public class ItemPreservationChamber extends Item {
     public static final ResourceLocation registryName = new ResourceLocation(CookingForBlockheads.MOD_ID, name);
 
     public ItemPreservationChamber() {
-        setUnlocalizedName(registryName.toString());
+        setTranslationKey(registryName.toString());
         setCreativeTab(CookingForBlockheads.creativeTab);
         setMaxStackSize(1);
     }
