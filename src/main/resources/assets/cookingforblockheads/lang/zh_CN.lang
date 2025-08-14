@@ -1,6 +1,10 @@
 item.cookingforblockheads:recipe_book_tier0.name=傻瓜烹饪手册
 item.cookingforblockheads:recipe_book_tier1.name=傻瓜烹饪手册I
 item.cookingforblockheads:recipe_book_tier2.name=傻瓜烹饪手册II
+item.cookingforblockheads:heating_unit.name=加热升级
+item.cookingforblockheads:ice_unit.name=冷冻升级
+item.cookingforblockheads:preservation_chamber.name=保鲜升级
+
 
 tooltip.cookingforblockheads:recipe_book_tier0=#无过滤版
 tooltip.cookingforblockheads:recipe_book_tier0.description=显示所有的食谱.
@@ -45,9 +49,9 @@ gui.cookingforblockheads:no_ingredients=食材不足
 gui.cookingforblockheads:no_selection=在右边选定物品\n以查看食谱
 
 tooltip.cookingforblockheads:click_to_see_recipe=点击查看食谱
-tooltip.cookingforblockheads:click_to_craft_one=点击合成食物
+tooltip.cookingforblockheads:click_to_craft_one=点击烹饪食物
 tooltip.cookingforblockheads:click_to_smelt_one=点击烹饪食物
-tooltip.cookingforblockheads:click_to_craft_stack=Shift点击合成一组
+tooltip.cookingforblockheads:click_to_craft_stack=Shift点击烹饪一组
 tooltip.cookingforblockheads:click_to_smelt_stack=Shift点击烹饪一组
 tooltip.cookingforblockheads:missing_tools=缺少厨具
 tooltip.cookingforblockheads:missing_ingredients=缺少食材
@@ -128,6 +132,3 @@ tile.cookingforblockheads:sink_darkoak.name=深色橡木水槽
 ## 
 tooltip.cookingforblockheads:cooking_table.filter=过滤 -\n使用无过滤版傻瓜烹饪手册\n右键添加显示所有可烹饪食物的合成配方\nshift右键取出无过滤版傻瓜烹饪手册以移除配方显示
 
-item.cookingforblockheads:heating_unit.name=加热升级
-item.cookingforblockheads:ice_unit.name=冷冻升级
-item.cookingforblockheads:preservation_chamber.name=保鲜升级
