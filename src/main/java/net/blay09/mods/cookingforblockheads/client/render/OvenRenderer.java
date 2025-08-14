@@ -11,9 +11,6 @@ import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 
-import static net.minecraft.util.EnumFacing.NORTH;
-import static net.minecraft.util.EnumFacing.SOUTH;
-
 public class OvenRenderer extends TileEntitySpecialRenderer<TileOven> {
 
     public static IBakedModel modelDoor;

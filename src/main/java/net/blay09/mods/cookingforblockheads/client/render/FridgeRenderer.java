@@ -1,10 +1,7 @@
 package net.blay09.mods.cookingforblockheads.client.render;
 
-import net.blay09.mods.cookingforblockheads.CookingForBlockheads;
 import net.blay09.mods.cookingforblockheads.block.BlockFridge;
 import net.blay09.mods.cookingforblockheads.block.ModBlocks;
-import net.blay09.mods.cookingforblockheads.client.model.ModelFridgeDoor;
-import net.blay09.mods.cookingforblockheads.client.model.ModelFridgeLargeDoor;
 import net.blay09.mods.cookingforblockheads.tile.TileFridge;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
@@ -16,7 +13,6 @@ import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.items.IItemHandler;
 
 public class FridgeRenderer extends TileEntitySpecialRenderer<TileFridge> {

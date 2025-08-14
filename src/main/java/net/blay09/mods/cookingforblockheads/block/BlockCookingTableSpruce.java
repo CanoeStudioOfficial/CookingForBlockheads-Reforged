@@ -1,7 +1,6 @@
 package net.blay09.mods.cookingforblockheads.block;
 
 import net.blay09.mods.cookingforblockheads.CookingForBlockheads;
-import net.blay09.mods.cookingforblockheads.ItemUtils;
 import net.blay09.mods.cookingforblockheads.item.ModItems;
 import net.blay09.mods.cookingforblockheads.network.handler.GuiHandler;
 import net.blay09.mods.cookingforblockheads.tile.TileCookingTable;
@@ -12,7 +11,6 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
@@ -22,11 +20,9 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
-import net.minecraftforge.oredict.DyeUtils;
 
 import javax.annotation.Nullable;
 import java.util.List;
-import java.util.Optional;
 
 public class BlockCookingTableSpruce extends BlockCookingTable {
 

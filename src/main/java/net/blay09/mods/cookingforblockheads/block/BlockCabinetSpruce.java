@@ -3,7 +3,6 @@ package net.blay09.mods.cookingforblockheads.block;
 import net.blay09.mods.cookingforblockheads.CookingForBlockheads;
 import net.blay09.mods.cookingforblockheads.compat.Compat;
 import net.blay09.mods.cookingforblockheads.network.handler.GuiHandler;
-import net.blay09.mods.cookingforblockheads.tile.TileCabinet;
 import net.blay09.mods.cookingforblockheads.tile.TileCabinetSpruce;
 import net.blay09.mods.cookingforblockheads.tile.TileCounter;
 import net.minecraft.block.SoundType;
@@ -13,24 +12,20 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.items.ItemHandlerHelper;
-import net.minecraftforge.oredict.DyeUtils;
 
 import javax.annotation.Nullable;
 import java.util.List;
-import java.util.Optional;
 
 public class BlockCabinetSpruce extends BlockCabinet {
     public static final String name = "cabinet_spruce";

@@ -1,6 +1,5 @@
 package net.blay09.mods.cookingforblockheads.client.render;
 
-import net.blay09.mods.cookingforblockheads.block.BlockKitchen;
 import net.blay09.mods.cookingforblockheads.block.ModBlocks;
 import net.blay09.mods.cookingforblockheads.tile.TileFruitBasket;
 import net.minecraft.block.state.IBlockState;

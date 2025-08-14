@@ -3,7 +3,6 @@ package net.blay09.mods.cookingforblockheads.block;
 import net.blay09.mods.cookingforblockheads.CookingForBlockheads;
 import net.blay09.mods.cookingforblockheads.compat.Compat;
 import net.blay09.mods.cookingforblockheads.network.handler.GuiHandler;
-import net.blay09.mods.cookingforblockheads.tile.TileCabinet;
 import net.blay09.mods.cookingforblockheads.tile.TileCabinetAcacia;
 import net.blay09.mods.cookingforblockheads.tile.TileCounter;
 import net.minecraft.block.SoundType;
