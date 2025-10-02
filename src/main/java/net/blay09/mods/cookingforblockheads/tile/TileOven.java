@@ -336,9 +336,6 @@ public class TileOven extends TileEntity implements ITickable, IKitchenSmeltingP
     }
 
     public boolean isBurning() {
-        if (world.isRemote) {
-            world.markBlockRangeForRenderUpdate(this.getPos(), this.getPos());
-        }
         return furnaceBurnTime > 0;
     }
 
