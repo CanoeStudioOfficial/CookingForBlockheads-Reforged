@@ -102,6 +102,7 @@ public class TileOven extends TileEntity implements ITickable, IKitchenSmeltingP
     public int furnaceBurnTime;
     public int currentItemBurnTime;
     private boolean isDirty;
+    private boolean previouslyBurning;
 
     private boolean hasPowerUpgrade;
     private EnumFacing facing;
@@ -220,7 +221,12 @@ public class TileOven extends TileEntity implements ITickable, IKitchenSmeltingP
         if (hasChanged) {
             markDirty();
         }
+        if (world.isRemote && isBurning() != previouslyBurning) {
+            previouslyBurning = isBurning();
+            world.markBlockRangeForRenderUpdate(getPos(), getPos());
+        }
     }
+
 
     public int getEnergyStored() {
         return energyStorage.getEnergyStored();
