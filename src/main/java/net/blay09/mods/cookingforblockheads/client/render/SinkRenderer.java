@@ -1,20 +1,12 @@
 package net.blay09.mods.cookingforblockheads.client.render;
 
-import net.blay09.mods.cookingforblockheads.ModConfig;
-import net.blay09.mods.cookingforblockheads.block.BlockSink;
-import net.blay09.mods.cookingforblockheads.block.ModBlocks;
 import net.blay09.mods.cookingforblockheads.tile.TileSink;
-import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.block.model.IBakedModel;
-import net.minecraft.client.renderer.block.model.ItemCameraTransforms;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumFacing;
 import org.lwjgl.opengl.GL11;
 
 public class SinkRenderer extends TileEntitySpecialRenderer<TileSink> {
@@ -32,22 +24,6 @@ public class SinkRenderer extends TileEntitySpecialRenderer<TileSink> {
         GlStateManager.enableBlend();
         GlStateManager.disableCull();
 
-        if (!ModConfig.general.sinkRequiresWater) {
-            IBlockState state = tileEntity.getWorld().getBlockState(tileEntity.getPos());
-            if (state.getBlock() == ModBlocks.sink) {
-                EnumFacing facing = state.getValue(BlockSink.FACING);
-
-                GlStateManager.pushMatrix();
-                GlStateManager.translate(x + 0.5f, y + 0.78f, z + 0.5f);
-                GlStateManager.rotate(RenderUtils.getFacingAngle(facing) - 90, 0f, 1f, 0f);
-                GlStateManager.translate(-0.05f, 0f, -0.175f);
-                GlStateManager.scale(0.5f, 0.5f, 0.5f);
-                GlStateManager.rotate(135, 1f, 0f, 0f);
-                ItemStack fish = new ItemStack(Items.FISH);
-                Minecraft.getMinecraft().getRenderItem().renderItem(fish, ItemCameraTransforms.TransformType.FIXED);
-                GlStateManager.popMatrix();
-            }
-        }
 
         if (tileEntity.getWaterAmount() > 0) {
             GlStateManager.enableBlend();
