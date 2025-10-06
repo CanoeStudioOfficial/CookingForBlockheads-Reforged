@@ -13,7 +13,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -33,7 +32,7 @@ public class BlockCuttingBoard extends BlockKitchen {
     public static final String name = "cutting_board";
     public static final ResourceLocation registryName = new ResourceLocation(CookingForBlockheads.MOD_ID, name);
 
-    private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0.0625, 0, 0.0625, 0.9375, 0.0625, 0.9375);
+    private static final AxisAlignedBB BOUNDING_BOX = new AxisAlignedBB(0.125, 0, 0.125, 0.875, 0.1, 0.875);
 
     public BlockCuttingBoard() {
         super(Material.WOOD);
@@ -45,13 +44,23 @@ public class BlockCuttingBoard extends BlockKitchen {
     }
 
     @Override
-    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
+    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess world, BlockPos pos) {
+        if (shouldBlockRenderLowered(world, pos)) {
+            return BOUNDING_BOX.expand(0, -0.05, 0);
+        }
+
         return BOUNDING_BOX;
     }
 
     @Override
     protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, FACING);
+        return new BlockStateContainer(this, FACING, LOWERED);
+    }
+
+    @Override
+    @SuppressWarnings("deprecation")
+    public IBlockState getActualState(IBlockState state, IBlockAccess world, BlockPos pos) {
+        return state.withProperty(LOWERED, shouldBlockRenderLowered(world, pos));
     }
 
     @Override
@@ -99,11 +108,6 @@ public class BlockCuttingBoard extends BlockKitchen {
                 tooltip.add(TextFormatting.RED + s);
             }
         }
-    }
-
-    @Override
-    public BlockRenderLayer getRenderLayer() {
-        return BlockRenderLayer.CUTOUT;
     }
 
 }

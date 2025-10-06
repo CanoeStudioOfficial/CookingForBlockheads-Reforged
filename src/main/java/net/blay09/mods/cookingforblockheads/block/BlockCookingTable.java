@@ -12,6 +12,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
@@ -33,8 +34,8 @@ public class BlockCookingTable extends BlockKitchen {
     public static final String name = "cooking_table";
     public static final ResourceLocation registryName = new ResourceLocation(CookingForBlockheads.MOD_ID, name);
 
-    public BlockCookingTable(Material material) {
-        super(material);
+    public BlockCookingTable() {
+        super(Material.ROCK);
 
         setTranslationKey(registryName.toString());
         setSoundType(SoundType.STONE);
@@ -43,12 +44,17 @@ public class BlockCookingTable extends BlockKitchen {
 
     @Override
     protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, FACING);
+        return new BlockStateContainer(this, FACING, COLOR);
     }
 
     @Override
     @SuppressWarnings("deprecation")
     public IBlockState getActualState(IBlockState state, IBlockAccess world, BlockPos pos) {
+        TileEntity tileEntity = world.getTileEntity(pos);
+        if (tileEntity instanceof TileCookingTable) {
+            return state.withProperty(COLOR, ((TileCookingTable) tileEntity).getDyedColor());
+        }
+
         return state;
     }
 
@@ -115,10 +121,6 @@ public class BlockCookingTable extends BlockKitchen {
         for (String s : I18n.format("tooltip." + registryName + ".description").split("\\\\n")) {
             tooltip.add(TextFormatting.GRAY + s);
         }
-        for (String s : I18n.format("tooltip." + BlockCookingTable.registryName + ".filter").split("\\\\n")) {
-            tooltip.add(TextFormatting.DARK_PURPLE + s);
-        }
-        tooltip.add(TextFormatting.AQUA + I18n.format("tooltip.cookingforblockheads:dyeable"));
     }
 
 }

@@ -5,6 +5,7 @@ import com.google.common.collect.Sets;
 import net.blay09.mods.cookingforblockheads.api.IKitchenMultiBlock;
 import net.blay09.mods.cookingforblockheads.api.SourceItem;
 import net.blay09.mods.cookingforblockheads.api.capability.*;
+import net.blay09.mods.cookingforblockheads.block.ModBlocks;
 import net.blay09.mods.cookingforblockheads.registry.CookingRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;

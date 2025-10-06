@@ -8,7 +8,6 @@ import net.blay09.mods.cookingforblockheads.client.gui.SortButtonSaturation;
 import net.blay09.mods.cookingforblockheads.compat.Compat;
 import net.blay09.mods.cookingforblockheads.compat.JsonCompatLoader;
 import net.blay09.mods.cookingforblockheads.compat.VanillaAddon;
-import net.blay09.mods.cookingforblockheads.cookingforblockheads.Tags;
 import net.blay09.mods.cookingforblockheads.item.ModItems;
 import net.blay09.mods.cookingforblockheads.network.NetworkHandler;
 import net.blay09.mods.cookingforblockheads.network.handler.GuiHandler;
@@ -39,10 +38,10 @@ import org.apache.logging.log4j.Logger;
 import java.io.File;
 
 @Mod.EventBusSubscriber(modid = CookingForBlockheads.MOD_ID)
-@Mod(modid = Tags.MOD_ID, acceptedMinecraftVersions = "[1.12]", dependencies = "after:mousetweaks[2.8,);after:crafttweaker")
+@Mod(modid = CookingForBlockheads.MOD_ID, acceptedMinecraftVersions = "[1.12]", dependencies = "after:mousetweaks[2.8,);after:crafttweaker")
 public class CookingForBlockheads {
 
-    public static final String MOD_ID = Tags.MOD_ID;
+    public static final String MOD_ID = "cookingforblockheads";
     public static final Logger logger = LogManager.getLogger(MOD_ID);
 
     public static final NonNullList<ItemStack> extraCreativeTabItems = NonNullList.create();

@@ -16,11 +16,11 @@ import net.minecraft.client.resources.I18n;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.*;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.IBlockAccess;
@@ -36,11 +36,6 @@ public class BlockFridge extends BlockKitchen {
 
     public static final String name = "fridge";
     public static final ResourceLocation registryName = new ResourceLocation(CookingForBlockheads.MOD_ID, name);
-
-    private static final AxisAlignedBB BOUNDING_BOX_NORTH = new AxisAlignedBB(1, 1, 1, 0, 0, 0.0625);
-    private static final AxisAlignedBB BOUNDING_BOX_EAST = new AxisAlignedBB(0.9375, 1, 1, 0, 0, 0);
-    private static final AxisAlignedBB BOUNDING_BOX_SOUTH = new AxisAlignedBB(1, 1, 0.9375, 0, 0, 0);
-    private static final AxisAlignedBB BOUNDING_BOX_WEST = new AxisAlignedBB(1, 1, 1, 0.0625, 0, 0);
 
     public enum FridgeType implements IStringSerializable {
         SMALL,
@@ -64,22 +59,6 @@ public class BlockFridge extends BlockKitchen {
         setSoundType(SoundType.METAL);
         setHardness(5f);
         setResistance(10f);
-    }
-
-    @Override
-    @SuppressWarnings("deprecation")
-    public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-        switch(state.getValue(FACING)) {
-            case EAST:
-                return BOUNDING_BOX_EAST;
-            case WEST:
-                return BOUNDING_BOX_WEST;
-            case SOUTH:
-                return BOUNDING_BOX_SOUTH;
-            case NORTH:
-            default:
-                return BOUNDING_BOX_NORTH;
-        }
     }
 
     @Override

@@ -2,6 +2,7 @@ package net.blay09.mods.cookingforblockheads;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 
 import java.util.Collections;

@@ -35,7 +35,7 @@ public class SortButtonName implements ISortButton {
 
     @Override
     public int getIconTextureY() {
-        return 196;
+        return 0;
     }
 
 }

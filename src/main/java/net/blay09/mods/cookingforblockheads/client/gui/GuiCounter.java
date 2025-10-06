@@ -1,5 +1,6 @@
 package net.blay09.mods.cookingforblockheads.client.gui;
 
+import net.blay09.mods.cookingforblockheads.CookingForBlockheads;
 import net.blay09.mods.cookingforblockheads.container.ContainerCounter;
 import net.blay09.mods.cookingforblockheads.tile.TileCounter;
 import net.minecraft.client.gui.inventory.GuiContainer;
