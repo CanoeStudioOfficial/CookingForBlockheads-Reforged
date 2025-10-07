@@ -1,7 +1,9 @@
 package net.blay09.mods.cookingforblockheads.block;
 
 import net.blay09.mods.cookingforblockheads.CookingForBlockheads;
+import net.blay09.mods.cookingforblockheads.block.vanilla.*;
 import net.blay09.mods.cookingforblockheads.tile.*;
+import net.blay09.mods.cookingforblockheads.tile.vanila.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -107,22 +109,22 @@ public class ModBlocks {
     @GameRegistry.ObjectHolder(BlockCorner.name)
     public static final Block corner = Blocks.AIR;
 
-    @GameRegistry.ObjectHolder(BlockCornerOak.name)
+    @GameRegistry.ObjectHolder(BlockCookingTableOak.BlockCornerOak.name)
     public static final Block cornerOak = Blocks.AIR;
 
-    @GameRegistry.ObjectHolder(BlockCornerSpruce.name)
+    @GameRegistry.ObjectHolder(BlockCookingTableOak.BlockCornerSpruce.name)
     public static final Block cornerSpruce = Blocks.AIR;
 
-    @GameRegistry.ObjectHolder(BlockCornerBirch.name)
+    @GameRegistry.ObjectHolder(BlockCookingTableOak.BlockCornerBirch.name)
     public static final Block cornerBirch = Blocks.AIR;
 
-    @GameRegistry.ObjectHolder(BlockCornerJungle.name)
+    @GameRegistry.ObjectHolder(BlockCookingTableOak.BlockCornerJungle.name)
     public static final Block cornerJungle = Blocks.AIR;
 
-    @GameRegistry.ObjectHolder(BlockCornerAcacia.name)
+    @GameRegistry.ObjectHolder(BlockCookingTableOak.BlockCornerAcacia.name)
     public static final Block cornerAcacia = Blocks.AIR;
 
-    @GameRegistry.ObjectHolder(BlockCornerDarkOak.name)
+    @GameRegistry.ObjectHolder(BlockCookingTableOak.BlockCornerDarkOak.name)
     public static final Block cornerDarkOak = Blocks.AIR;
 
     @GameRegistry.ObjectHolder(BlockToolRack.name)
@@ -187,12 +189,12 @@ public class ModBlocks {
                 new BlockCabinetDarkOak(Material.WOOD).setRegistryName(BlockCabinetDarkOak.name),
 
                 new BlockCorner(Material.ROCK).setRegistryName(BlockCorner.name),
-                new BlockCornerOak(Material.WOOD).setRegistryName(BlockCornerOak.name),
-                new BlockCornerSpruce(Material.WOOD).setRegistryName(BlockCornerSpruce.name),
-                new BlockCornerBirch(Material.WOOD).setRegistryName(BlockCornerBirch.name),
-                new BlockCornerJungle(Material.WOOD).setRegistryName(BlockCornerJungle.name),
-                new BlockCornerAcacia(Material.WOOD).setRegistryName(BlockCornerAcacia.name),
-                new BlockCornerDarkOak(Material.WOOD).setRegistryName(BlockCornerDarkOak.name),
+                new BlockCookingTableOak.BlockCornerOak(Material.WOOD).setRegistryName(BlockCookingTableOak.BlockCornerOak.name),
+                new BlockCookingTableOak.BlockCornerSpruce(Material.WOOD).setRegistryName(BlockCookingTableOak.BlockCornerSpruce.name),
+                new BlockCookingTableOak.BlockCornerBirch(Material.WOOD).setRegistryName(BlockCookingTableOak.BlockCornerBirch.name),
+                new BlockCookingTableOak.BlockCornerJungle(Material.WOOD).setRegistryName(BlockCookingTableOak.BlockCornerJungle.name),
+                new BlockCookingTableOak.BlockCornerAcacia(Material.WOOD).setRegistryName(BlockCookingTableOak.BlockCornerAcacia.name),
+                new BlockCookingTableOak.BlockCornerDarkOak(Material.WOOD).setRegistryName(BlockCookingTableOak.BlockCornerDarkOak.name),
 
                 new BlockToolRack().setRegistryName(BlockToolRack.name),
                 new BlockToaster().setRegistryName(BlockToaster.name),
@@ -244,12 +246,12 @@ public class ModBlocks {
                 new ItemBlock(ModBlocks.cabinetDarkOak).setRegistryName(BlockCabinetDarkOak.name),
 
                 new ItemBlock(ModBlocks.corner).setRegistryName(BlockCorner.name),
-                new ItemBlock(ModBlocks.cornerOak).setRegistryName(BlockCornerOak.name),
-                new ItemBlock(ModBlocks.cornerSpruce).setRegistryName(BlockCornerSpruce.name),
-                new ItemBlock(ModBlocks.cornerBirch).setRegistryName(BlockCornerBirch.name),
-                new ItemBlock(ModBlocks.cornerJungle).setRegistryName(BlockCornerJungle.name),
-                new ItemBlock(ModBlocks.cornerAcacia).setRegistryName(BlockCornerAcacia.name),
-                new ItemBlock(ModBlocks.cornerDarkOak).setRegistryName(BlockCornerDarkOak.name),
+                new ItemBlock(ModBlocks.cornerOak).setRegistryName(BlockCookingTableOak.BlockCornerOak.name),
+                new ItemBlock(ModBlocks.cornerSpruce).setRegistryName(BlockCookingTableOak.BlockCornerSpruce.name),
+                new ItemBlock(ModBlocks.cornerBirch).setRegistryName(BlockCookingTableOak.BlockCornerBirch.name),
+                new ItemBlock(ModBlocks.cornerJungle).setRegistryName(BlockCookingTableOak.BlockCornerJungle.name),
+                new ItemBlock(ModBlocks.cornerAcacia).setRegistryName(BlockCookingTableOak.BlockCornerAcacia.name),
+                new ItemBlock(ModBlocks.cornerDarkOak).setRegistryName(BlockCookingTableOak.BlockCornerDarkOak.name),
 
                 new ItemBlock(ModBlocks.toolRack).setRegistryName(BlockToolRack.name),
                 new ItemBlock(ModBlocks.toaster).setRegistryName(BlockToaster.name),
@@ -301,12 +303,12 @@ public class ModBlocks {
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(cabinetDarkOak), 0, new ModelResourceLocation(BlockCabinetDarkOak.registryName, "inventory"));
 
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(corner), 0, new ModelResourceLocation(BlockCorner.registryName, "inventory"));
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(cornerOak), 0, new ModelResourceLocation(BlockCornerOak.registryName, "inventory"));
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(cornerSpruce), 0, new ModelResourceLocation(BlockCornerSpruce.registryName, "inventory"));
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(cornerBirch), 0, new ModelResourceLocation(BlockCornerBirch.registryName, "inventory"));
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(cornerJungle), 0, new ModelResourceLocation(BlockCornerJungle.registryName, "inventory"));
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(cornerAcacia), 0, new ModelResourceLocation(BlockCornerAcacia.registryName, "inventory"));
-        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(cornerDarkOak), 0, new ModelResourceLocation(BlockCornerDarkOak.registryName, "inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(cornerOak), 0, new ModelResourceLocation(BlockCookingTableOak.BlockCornerOak.registryName, "inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(cornerSpruce), 0, new ModelResourceLocation(BlockCookingTableOak.BlockCornerSpruce.registryName, "inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(cornerBirch), 0, new ModelResourceLocation(BlockCookingTableOak.BlockCornerBirch.registryName, "inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(cornerJungle), 0, new ModelResourceLocation(BlockCookingTableOak.BlockCornerJungle.registryName, "inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(cornerAcacia), 0, new ModelResourceLocation(BlockCookingTableOak.BlockCornerAcacia.registryName, "inventory"));
+        ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(cornerDarkOak), 0, new ModelResourceLocation(BlockCookingTableOak.BlockCornerDarkOak.registryName, "inventory"));
 
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(toolRack), 0, new ModelResourceLocation(BlockToolRack.registryName, "inventory"));
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(toaster), 0, new ModelResourceLocation(BlockToaster.registryName, "inventory"));
