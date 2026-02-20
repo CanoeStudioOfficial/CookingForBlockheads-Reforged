@@ -8,6 +8,7 @@ import net.blay09.mods.cookingforblockheads.client.gui.SortButtonSaturation;
 import net.blay09.mods.cookingforblockheads.compat.Compat;
 import net.blay09.mods.cookingforblockheads.compat.JsonCompatLoader;
 import net.blay09.mods.cookingforblockheads.compat.VanillaAddon;
+import net.blay09.mods.cookingforblockheads.cookingforblockheads.Tags;
 import net.blay09.mods.cookingforblockheads.item.ModItems;
 import net.blay09.mods.cookingforblockheads.network.NetworkHandler;
 import net.blay09.mods.cookingforblockheads.network.handler.GuiHandler;
